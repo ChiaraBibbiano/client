@@ -1,0 +1,14 @@
+*
+!.gitignore
+!readme.md
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/client
+!wp-content/themes/client/*
+!wp-content/themes/client/**/*
+wp-content/themes/client/public/*
+!vite.config.js
+!package.json
+!postcss.config.js
