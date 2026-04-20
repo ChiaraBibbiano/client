@@ -64,7 +64,18 @@ function __hepl(string $translation): ?string
     return __($translation, 'hepl-trad');
 }
 
-
+register_post_type('sensibilisation', [
+    'label' => 'Sensibilisations',
+    'description' => 'Les sensibilisations présentes sur mon site web',
+    'menu_position' => 2,
+    'menu_icon' => 'dashicons-welcome-view-site',
+    'public' => true,
+    'has_archive' => false,
+    'supports' => ['title'],
+    'rewrite' => [
+        'slug' => 'sensibilisations'
+    ],
+]);
 
 
 
