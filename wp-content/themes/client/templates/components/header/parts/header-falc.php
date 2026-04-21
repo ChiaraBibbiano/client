@@ -1,6 +1,6 @@
 <?php
-$title = get_field('title-falc');
-$text = get_field('description_header-falc');
+$title = get_field('title_falc');
+$text = get_field('description_header_falc');
 ?>
 
 <section class="hero-falc">

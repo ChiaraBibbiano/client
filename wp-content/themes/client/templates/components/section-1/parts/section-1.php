@@ -1,7 +1,7 @@
 <?php
 $title = get_field('title_one');
 $subtitle = get_field('subtitle_one');
-$cards = get_field('card_one');
+$cards = get_field('cards');
 ?>
 
 <section class="section-1">
