@@ -25,7 +25,6 @@
 <header>
     <nav class="navigation"> <!-- Navigation homemade -->
         <h2 class="navigation__title sro">Menu de navigation</h2>
-        <a class="" href="front-page.php"> BIBBIANO CHIARA</a>
         <ul class="navigation__list">
             <?php foreach (dw_get_navigation_links('header') as $link) : ?>
                 <li class="navigation__list-item">
