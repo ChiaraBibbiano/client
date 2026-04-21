@@ -14,7 +14,6 @@ $text = get_field('description_header');
     <div>
 
     </div>
-
 </section>
 
 
