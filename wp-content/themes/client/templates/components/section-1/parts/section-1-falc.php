@@ -13,10 +13,10 @@ $cards = get_field('cards_falc');
         <?php foreach ($cards as $card): ?>
             <div class="section-1-falc__cards">
                 <p class="section-1-falc__card-text">
-                    <?= $card['card'] ?>
+                    <?= $card['card_falc'] ?>
                 </p>
                 <p class="section-1-falc__card-number">
-                    <?= $card['number_card'] ?>
+                    <?= $card['number_card_falc'] ?>
                 </p>
             </div>
         <?php endforeach; ?>

@@ -11,10 +11,10 @@ $cards = get_field('cards_two');
         <?php foreach ($cards as $card): ?>
             <div class="section-2__card">
                 <p class="section-2__card-text">
-                    <?= $card['card'] ?>
+                    <?= $card['card_two'] ?>
                 </p>
                 <p class="section-2__card-number">
-                    <?= $card['number_card'] ?>
+                    <?= $card['number_card_two'] ?>
                 </p>
             </div>
         <?php endforeach; ?>

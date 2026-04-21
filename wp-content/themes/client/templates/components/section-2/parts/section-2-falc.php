@@ -2,7 +2,7 @@
 $title = get_field('title_two_falc');
 $subtitle = get_field('subtitle_two_falc');
 $title_cards = get_field('cards_title');
-$cards = get_field('cards_falc');
+$cards = get_field('cards_two_falc');
 ?>
 
 <section class="section-2-falc">
@@ -13,10 +13,10 @@ $cards = get_field('cards_falc');
         <?php foreach ($cards as $card): ?>
             <div class="section-2-falc__cards">
                 <p class="section-2-falc__card-text">
-                    <?= $card['card'] ?>
+                    <?= $card['card_two_falc'] ?>
                 </p>
                 <p class="section-1-falc__card-number">
-                    <?= $card['number_card'] ?>
+                    <?= $card['number_card_two_falc'] ?>
                 </p>
             </div>
         <?php endforeach; ?>
