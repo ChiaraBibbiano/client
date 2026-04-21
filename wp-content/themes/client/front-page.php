@@ -4,6 +4,7 @@
 <?= get_template_part('templates/components/section-1/section-1'); ?>
 <?= get_template_part('templates/components/section-2/section-2'); ?>
 <?= get_template_part('templates/components/section-3/section-3'); ?>
+<?= get_template_part('templates/components/section-teacher/section-teacher'); ?>
 
 <?php get_footer(); ?>
 
