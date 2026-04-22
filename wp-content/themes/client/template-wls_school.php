@@ -3,7 +3,7 @@
  * Template Name: School template
  */
 
-get_header();
+get_header('teacher');
 
 if (!\wtl\Authentication::is_logged_in()) {
     wp_safe_redirect(home_url('/connexion/'));

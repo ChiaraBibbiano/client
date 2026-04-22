@@ -11,7 +11,6 @@
 
 </head>
 <body>
-<?php include get_template_directory() . '/assets/icons/sprite.svg'; ?>
 <h1 class="sro"><?= get_the_title() ?></h1>
 <!--<nav>  Menu de navigation par Wordpress
   <h2 class="sro">Menu de navigation</h2>
@@ -27,22 +26,11 @@
     <nav class="navigation"> <!-- Navigation homemade -->
         <h2 class="navigation__title sro">Menu de navigation</h2>
         <ul class="navigation__list">
-            <?php
-            if (is_front_page()):
-            $falc = isset($_GET['falc']) ? sanitize_text_field($_GET['falc']) : '';
-            ?>
-            <li class="navigation__list-item">
-                <a class="navigation__link"
-                   href="<?= $falc === 'true' ? '/' : '/?falc=true' ?>"><?= $falc === 'true' ? 'Mode normal' : 'Mode falc' ?></a>
-            </li>
-            <?php endif; ?>
-
-            <li class="navigation__list-item">
-                <a class="navigation__link navigation__link--login"
-                   href="<?= get_permalink(get_page_by_path('connexion')); ?>">
-                    Mon espace
-                </a>
-            </li>
+            <?php foreach (dw_get_navigation_links('header') as $link) : ?>
+                <li class="navigation__list-item">
+                    <a class="navigation__link" href="<?= $link->href ?>"><?= $link->label ?></a>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </nav>
 </header>

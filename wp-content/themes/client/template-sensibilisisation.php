@@ -10,7 +10,7 @@ $args = [
 $sensibilisations = new WP_Query($args);
 ?>
 
-<?php get_header(); ?>
+<?php get_header('teacher'); ?>
 
 <?php if ($sensibilisations->have_posts()) : while ($sensibilisations->have_posts()): $sensibilisations->the_post(); ?>
     <div>

@@ -20,7 +20,7 @@ $title2 = get_field('title_two');
 $text = get_field('text');
 
 ?>
-<?php get_header(); ?>
+<?php get_header('teacher'); ?>
 <section class="contact">
     <div class="contact__container">
         <h1 class="contact__title1"><?= $title1 ?> </h1>

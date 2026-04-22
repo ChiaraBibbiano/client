@@ -5,7 +5,7 @@ include('core/theme/configuration.php');
 
 register_nav_menu('header', 'Le menu qui se trouve dans le header');
 register_nav_menu('footer', 'Le menu qui se trouve dans le footer');
-register_nav_menu('social-media', 'Le menu qui regroupe nos réseaux sociaux');
+
 
 function dw_get_navigation_links(string $menu_name): array
 {
