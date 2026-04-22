@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<?php include get_template_directory() . '/assets/icons/sprite.svg'; ?>
 <h1 class="sro"><?= get_the_title() ?></h1>
 <!--<nav>  Menu de navigation par Wordpress
   <h2 class="sro">Menu de navigation</h2>
@@ -25,6 +26,11 @@
 <header>
     <nav class="navigation"> <!-- Navigation homemade -->
         <h2 class="navigation__title sro">Menu de navigation</h2>
+        <a href="<?= get_permalink(get_page_by_path('mon-espace')); ?>" class="navigation__logo">
+            <svg aria-label="Logo PLAI" role="img">
+                <use href="#logo"/>
+            </svg>
+        </a>
         <ul class="navigation__list">
             <?php foreach (dw_get_navigation_links('header') as $link) : ?>
                 <li class="navigation__list-item">

@@ -26,6 +26,11 @@
 <header>
     <nav class="navigation"> <!-- Navigation homemade -->
         <h2 class="navigation__title sro">Menu de navigation</h2>
+        <a href="<?= home_url('/'); ?>" class="navigation__logo">
+            <svg aria-label="Logo PLAI" role="img">
+                <use href="#logo"/>
+            </svg>
+        </a>
         <ul class="navigation__list">
             <?php
             if (is_front_page()):

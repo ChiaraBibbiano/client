@@ -1,6 +1,7 @@
 <?php
 $title = get_field('title');
 $text = get_field('description_header');
+$illustration = get_field('illustration_hero');
 ?>
 
 
