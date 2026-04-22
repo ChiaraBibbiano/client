@@ -38,7 +38,7 @@
             ?>
             <li class="navigation__list-item">
                 <a class="navigation__link"
-                   href="<?= $falc === 'true' ? '/' : '/?falc=true' ?>"><?= $falc === 'true' ? 'Mode normal' : 'Mode falc' ?></a>
+                   href="<?= $falc === 'true' ? '/' : '/?falc=true' ?>"><?= $falc === 'true' ? 'Mode normal' : 'Cliquez ici pour le facile à lire et à comprendre (FALC)' ?></a>
             </li>
             <?php endif; ?>
 
