@@ -7,4 +7,3 @@
 <?= get_template_part('templates/components/section-teacher/section-teacher'); ?>
 
 <?php get_footer(); ?>
-

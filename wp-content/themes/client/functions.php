@@ -4,7 +4,9 @@
 include('core/theme/configuration.php');
 
 register_nav_menu('header', 'Le menu qui se trouve dans le header');
+register_nav_menu('header-teacher', 'Le menu qui se trouve dans le header teacher');
 register_nav_menu('footer', 'Le menu qui se trouve dans le footer');
+register_nav_menu('footer-teacher', 'Le menu qui se trouve dans le footer teacher');
 
 
 function dw_get_navigation_links(string $menu_name): array
@@ -75,6 +77,15 @@ register_post_type('sensibilisation', [
     'rewrite' => [
         'slug' => 'sensibilisations'
     ],
+]);
+register_taxonomy('type', 'sensibilisation', [
+    'hierarchical' => true,
+    'labels' => [
+        'name' => 'Le type de sensibilisation'
+    ],
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
 ]);
 
 
