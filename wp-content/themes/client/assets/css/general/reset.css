@@ -46,3 +46,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('../../fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 900;
+    font-style: normal;
+}
