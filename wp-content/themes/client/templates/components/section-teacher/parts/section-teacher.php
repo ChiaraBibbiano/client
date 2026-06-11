@@ -8,23 +8,26 @@ $connexion_url  = $connexion_page
 ?>
 
 <section class="section-teacher">
+    <div class="section-teacher__container">
+        <?php if ( ! empty( $title ) ) : ?>
+            <h2 class="section-teacher__title title">
+                <?= esc_html( $title ) ?>
+            </h2>
+        <?php endif; ?>
+        <?php if ( ! empty( $text ) ) : ?>
 
-    <?php if ( ! empty( $title ) ) : ?>
-        <h2 class="section-teacher__title">
-            <?= esc_html( $title ) ?>
-        </h2>
-    <?php endif; ?>
+            <p class="section-teacher__text sub">
+                <?= wp_kses_post( $text ) ?>
+            </p>
+        <?php endif; ?>
 
-    <?php if ( ! empty( $text ) ) : ?>
-        <p class="section-teacher__text">
-            <?= wp_kses_post( $text ) ?>
-        </p>
-    <?php endif; ?>
+        <a class="section-teacher__btn" href="<?= esc_url( $connexion_url ) ?>" aria-label="Accéder à mon espace connexion">
+            <svg aria-hidden="true" focusable="false">
+                <use href="#fleche-btn"/>
+            </svg>
+        </a>
+    </div>
 
-    <a class="section-teacher__btn" href="<?= esc_url( $connexion_url ) ?>" aria-label="Accéder à mon espace connexion">
-        <svg aria-hidden="true" focusable="false">
-            <use href="#fleche-btn"/>
-        </svg>
-    </a>
+
 
 </section>

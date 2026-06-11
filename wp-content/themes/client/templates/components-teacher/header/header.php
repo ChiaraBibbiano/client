@@ -7,7 +7,6 @@ $img    = get_field('photo_fille');
 
 <section class="hero-teacher" aria-labelledby="hero-teacher-title">
     <div class="hero-teacher__left">
-
         <?php if ( ! empty( $title1 ) ) : ?>
             <h2 class="hero-teacher__title">
                 <?= esc_html( $title1 ) ?>
@@ -19,18 +18,19 @@ $img    = get_field('photo_fille');
                 <?= esc_html( $title2 ) ?>
             </h3>
         <?php endif; ?>
-
-        <svg aria-hidden="true" focusable="false" role="presentation">
-            <use href="#deco-cercle"/>
-        </svg>
-
         <?php if ( ! empty( $sub ) ) : ?>
             <p class="hero-teacher__sub">
                 <?= wp_kses_post( $sub ) ?>
             </p>
         <?php endif; ?>
 
-        <svg aria-hidden="true" focusable="false" role="presentation">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="hero-teacher__cercle">
+            <use href="#deco-cercle"/>
+        </svg>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="hero-teacher__soulUn">
+            <use href="#deco-soulignement"/>
+        </svg>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="hero-teacher__soulDeux">
             <use href="#deco-soulignement"/>
         </svg>
 
@@ -40,9 +40,5 @@ $img    = get_field('photo_fille');
         <div class="hero-teacher__illustration" role="presentation">
             <?= wp_get_attachment_image( (int) $img['id'], 'full' ) ?>
         </div>
-        <svg aria-hidden="true" focusable="false" role="presentation">
-            <use href="#illustration-hero"/>
-        </svg>
     <?php endif; ?>
-
 </section>

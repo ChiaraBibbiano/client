@@ -8,21 +8,21 @@ $connexion_url  = $connexion_page
 ?>
 
 <section class="section-teacher-falc">
-
+<div class="section-teacher-falc__container">
     <?php if ( ! empty( $title ) ) : ?>
-        <h2 class="section-teacher-falc__title">
-            <?= esc_html( $title ) ?>
-        </h2>
+    <h2 class="section-teacher-falc__title title">
+        <?= esc_html( $title ) ?>
+    </h2>
     <?php endif; ?>
 
     <?php if ( ! empty( $text ) ) : ?>
-        <p class="section-teacher-falc__text">
-            <?= wp_kses_post( $text ) ?>
-        </p>
+    <p class="section-teacher-falc__text sub">
+        <?= wp_kses_post( $text ) ?>
+    </p>
     <?php endif; ?>
-
     <a class="section-teacher-falc__btn" href="<?= esc_url( $connexion_url ) ?>">
         Se connecter
     </a>
+</div >
 
 </section>

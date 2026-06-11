@@ -5,15 +5,19 @@ $cards    = get_field('cards');
 ?>
 
 <section class="section-1">
-
+    <div class="section-1__svg">
+        <svg class="section-1__crayon" aria-hidden="true" focusable="false" role="presentation">
+            <use href="#deco-crayons"/>
+        </svg>
+    </div>
     <?php if ( ! empty( $title ) ) : ?>
-        <h2 class="section-1__title">
+        <h2 class="section-1__title title">
             <?= esc_html( $title ) ?>
         </h2>
     <?php endif; ?>
 
     <?php if ( ! empty( $subtitle ) ) : ?>
-        <p class="section-1__subtitle">
+        <p class="section-1__subtitle sub">
             <?= wp_kses_post( $subtitle ) ?>
         </p>
     <?php endif; ?>
@@ -26,22 +30,19 @@ $cards    = get_field('cards');
                 $card_number = $card['number_card'] ?? '';
                 ?>
                 <div class="section-1__card">
-
-                    <?php if ( ! empty( $card_text ) ) : ?>
-                        <p class="section-1__card-text">
-                            <?= wp_kses_post( $card_text ) ?>
-                        </p>
-                    <?php endif; ?>
-
                     <?php if ( ! empty( $card_number ) ) : ?>
                         <p class="section-1__card-number">
                             <?= esc_html( $card_number ) ?>
                         </p>
                     <?php endif; ?>
 
+                    <?php if ( ! empty( $card_text ) ) : ?>
+                        <p class="section-1__card-text">
+                            <?= wp_kses_post( $card_text ) ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-
 </section>
