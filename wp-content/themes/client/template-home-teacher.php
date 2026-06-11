@@ -10,5 +10,6 @@
 <?= get_template_part('templates/components-teacher/section-2/section-2'); ?>
 <?= get_template_part('templates/components-teacher/section-3/section-3'); ?>
 <?= get_template_part('templates/components-teacher/section-4/section-4'); ?>
+<?= get_template_part('templates/components-teacher/section-5/section-5'); ?>
 
 <?php get_footer('teacher'); ?>

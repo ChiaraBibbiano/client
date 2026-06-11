@@ -19,17 +19,24 @@ $sprite_path = get_template_directory() . '/assets/icons/sprite.svg';
 if (file_exists($sprite_path)) {
     include $sprite_path;
 } ?>
-
 <h1 class="sro"><?= esc_html( get_the_title() ) ?></h1>
-<header>
+<header class="sticky">
     <nav class="navigation">
         <h2 class="navigation__title sro">Menu de navigation</h2>
-        <a href="<?= esc_url( home_url('/') ) ?>" class="navigation__logo">
-            <svg aria-label="Logo PLAI" role="img">
+        <a href="<?= esc_url( home_url('/') ) ?>" >
+            <svg aria-label="Logo PLAI" role="img" class="navigation__logo">
                 <use href="#logo"/>
             </svg>
         </a>
-        <ul class="navigation__list">
+        <button class="navigation__burger"
+                aria-expanded="false"
+                aria-controls="navigation-menu"
+                aria-label="<?= esc_attr__('Ouvrir le menu', 'plai') ?>">
+            <span class="navigation__burger-bar" aria-hidden="true"></span>
+            <span class="navigation__burger-bar" aria-hidden="true"></span>
+            <span class="navigation__burger-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="navigation__list" id="navigation-menu">
             <?php
             if (is_front_page()):
                 $falc = isset($_GET['falc']) ? sanitize_text_field($_GET['falc']) : '';
@@ -39,12 +46,13 @@ if (file_exists($sprite_path)) {
                        href="<?= $falc === 'true' ? '/' : '/?falc=true' ?>"><?= $falc === 'true' ? esc_html('Mode normal') : esc_html('Cliquez ici pour le facile à lire et à comprendre (FALC)') ?></a>
                 </li>
             <?php endif; ?>
-            <li class="navigation__list-item">
-                <a class="navigation__link navigation__link--login"
-                   href="<?= get_permalink(get_page_by_path('connexion')); ?>">
+            <li>
+                <a class="navigation__link-login"
+                   href="<?= esc_url(get_permalink(get_page_by_path('connexion'))) ?>">
                     Mon espace
                 </a>
             </li>
+
         </ul>
     </nav>
 </header>

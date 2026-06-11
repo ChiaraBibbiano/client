@@ -2,6 +2,7 @@
 $footer = dw_get_navigation_links('footer-teacher');
 ?>
 <footer class="footer">
+    <div class="footer__top">
     <a href="<?= esc_url( home_url('/') ) ?>" class="footer__logo">
         <svg aria-label="Logo PLAI" role="img">
             <use href="#logo"/>
@@ -19,6 +20,19 @@ $footer = dw_get_navigation_links('footer-teacher');
             <?php endforeach; ?>
         </ul>
     </nav>
+    </div>
+    <div class="footer__bottom">
+        <p class="footer__copyright">
+            ©<?= date('Y'); ?> Site internet réalisé par BIBBIANO CHIARA.Tous droits réservés.
+        </p>
+        <ul class="footer__legal" role="list">
+            <li class="footer__legal-item">
+                <a class="footer__legal-link" href="<?= esc_url(home_url('/mentions-legales')); ?>">
+                    Mentions légales
+                </a>
+            </li>
+        </ul>
+    </div>
 </footer>
 </body>
 </html>
