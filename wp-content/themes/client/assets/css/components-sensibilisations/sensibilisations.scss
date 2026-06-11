@@ -1,0 +1,63 @@
+@use '../general/general' as *;
+
+.sensi {
+  padding: $space-md $space-md;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+  &__title{
+    @media (min-width: $bp-lp) {
+      width: 44rem;
+    }
+  }
+
+  &__nav {
+    background-color: $color-purple;
+    border-radius: 1.25rem;
+
+    padding: 2rem 0 2rem 2rem;
+    margin: 3rem 0;
+    @media (min-width: 444px){
+      width: 22.6rem;
+    }
+  }
+
+  &__filtre {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border: 2px solid $color-bg;
+        border-radius: 0.176rem;
+        flex-shrink: 0;
+      }
+    }
+
+    &--active a::before {
+      background-color: $color-bg;
+    }
+  }
+}
+
+.pagination {
+  &__next, &__prev {
+    margin-top: $space-md;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.176rem;
+
+    &:hover {
+      color: $color-purple-hover;
+      text-decoration: underline;
+    }
+  }
+
+}

@@ -1,33 +1,10 @@
 @use '../general/general' as *;
 
-.section-1 {
-  background-color: $color-purple-light;
+.section-2 {
   padding: $space-lg $space-md;
 
   @media (min-width: $bp-lp) {
-    padding: $padd-d 24rem $padd-d $padd-d;
-  }
-
-  &__svg {
-    position: relative;
-  }
-
-  &__crayon {
-    position: absolute;
-    top: -2rem;
-    left: 69rem;
-    height: 246px;
-    animation: float 3s ease-in-out infinite;
-    @media (max-width: $bp-lp) {
-      display: none;
-    }
-  }
-
-  &__subtitle {
-    width: 36.12rem;
-    @media (max-width: $bp-lp) {
-      width: inherit;
-    }
+    padding: $padd-d;
   }
 
   &__container {
@@ -38,6 +15,13 @@
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &__subtitle {
+    width: 48.235rem;
+    @media (max-width: $bp-lp) {
+      width: inherit;
     }
   }
 
@@ -54,7 +38,6 @@
       transform: scale(1.03) rotate(1deg);
     }
 
-
     &::before {
       content: '';
       position: absolute;
@@ -68,49 +51,50 @@
     }
 
     &:nth-child(1) {
-      background-color: $color-violet;
-
-      &::before {
-        border-color: $color-violet;
-      }
-
-      .section-1__card-number {
-        color: #855DCA
-      }
-    }
-
-    &:nth-child(2) {
-      background-color: $color-pink;
-
-      &::before {
-        border-color: $color-pink;
-      }
-
-      .section-1__card-number {
-        color: #A55C77;
-      }
-    }
-
-    &:nth-child(3) {
-      background-color: $color-blue;
-
-      &::before {
-        border-color: $color-blue;
-      }
-
-      .section-1__card-number {
-        color: #4C769E;
-      }
-    }
-    &:nth-child(4) {
       background-color: $color-green;
 
       &::before {
         border-color: $color-green;
       }
 
-      .section-1__card-number {
+      .section-2__card-number {
         color: #67794B;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $color-blue;
+
+      &::before {
+        border-color: $color-blue;
+      }
+
+      .section-2__card-number {
+        color: #4C769E;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: $color-violet;
+
+      &::before {
+        border-color: $color-violet;
+      }
+
+      .section-2__card-number {
+        color: #855DCA;
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: $color-pink;
+
+      &::before {
+        border-color: $color-pink;
+      }
+
+      .section-2__card-number {
+        color: #A55C77;
       }
     }
   }
@@ -125,26 +109,32 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+
+
   }
 
   &__card-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
     @media (min-width: $bp-lp) {
       font-size: 1.176rem;
     }
   }
 }
 
-.section-1-falc {
-  background-color: $color-purple-light;
+.section-2-falc {
   padding: $space-md $space-sm;
-
   @media (min-width: $bp-lp) {
     padding: $padd-d;
   }
-  &__container{
+
+  &__container {
     margin-top: $space-md;
   }
-  &__title-cards{
+
+  &__title-cards {
     font-size: 1.176rem;
     font-weight: 500;
   }

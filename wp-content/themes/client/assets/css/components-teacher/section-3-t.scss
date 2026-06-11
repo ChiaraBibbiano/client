@@ -1,0 +1,94 @@
+@use '../general/general' as *;
+
+.section-3-teacher {
+  background-color: $color-purple-light;
+  padding: $space-lg $space-md;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__svg {
+    position: relative;
+  }
+
+  &__crayon-t {
+    position: absolute;
+    top: -2rem;
+    left: 69rem;
+    height: 246px;
+    animation: float 3s ease-in-out infinite;
+
+    @media (max-width: $bp-lp) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    @media (min-width: $bp-lp) {
+      width: 41.941rem;
+    }
+  }
+
+  &__container {
+    @media (max-width: $bp-lp) {
+      margin-top: $space-sm;
+      line-height: 1.8;
+      padding-left: 1rem;
+    }
+
+    @media (min-width: $bp-lp) {
+      display: inline-grid;
+      width: 61.941rem;
+      row-gap: 2.294rem;
+      column-gap: 13.118rem;
+      grid-template-rows: repeat(3, fit-content(100%));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-flow: row;
+      margin: 2.941rem 0 0 6.059rem;
+    }
+  }
+
+  &__puce {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @media (max-width: $bp-lp) {
+      line-height: 1.9;
+    }
+
+    &:nth-child(1) .section-3-teacher__puce-icon {
+      color: $color-blue;
+    }
+
+    &:nth-child(2) .section-3-teacher__puce-icon {
+      color: $color-pink;
+    }
+
+    &:nth-child(3) .section-3-teacher__puce-icon {
+      color: $color-pink;
+    }
+
+    &:nth-child(4) .section-3-teacher__puce-icon {
+      color: $color-purple;
+    }
+
+    &:nth-child(5) .section-3-teacher__puce-icon {
+      color: $color-green;
+    }
+
+    &:nth-child(6) .section-3-teacher__puce-icon {
+      color: $color-blue;
+    }
+  }
+
+  &__puce-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    @media (max-width: $bp-lp) {
+      width: 1.5rem;
+      height: 1rem;
+    }
+  }
+}

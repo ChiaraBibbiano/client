@@ -1,0 +1,101 @@
+@use '../general/general' as *;
+
+.hero-teacher {
+  padding: 0 $space-md 1rem;
+  @media (min-width: $bp-lp) {
+    padding: 0 $padd-d;
+  }
+
+  &__title {
+    font-size: 3.9rem;
+    margin-top: $space-lg;
+    line-height: 0.8;
+
+    @media (min-width: $bp-lp) {
+      font-size: 2.76rem;
+      width: 35.88rem;
+      margin: 7.65rem 0 0;
+      line-height: 1.5;
+
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.882rem;
+    @media (min-width: $bp-lp) {
+      font-size: 1.882rem;
+    }
+  }
+
+  &__cercle {
+    width: 17rem;
+    position: absolute;
+    top: 7.5rem;
+    left: 6rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      width: 16.8rem;
+      height: 9.1rem;
+      position: absolute;
+      top: 16rem;
+      left: 17rem;
+    }
+  }
+
+  &__soulUn {
+    position: absolute;
+    top: 12rem;
+    left: 9rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      position: absolute;
+      top: 27rem;
+      left: 22rem;
+      pointer-events: none;
+      width: 10rem;
+    }
+  }
+  &__soulDeux {
+    position: absolute;
+    top: 12.5rem;
+    left: 8rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      top: 26.5rem;
+      left: 21rem;
+      width: 10rem;
+    }
+  }
+
+  &__sub {
+    font-weight: 300;
+    width: 19rem;
+    margin-top: 2.5rem;
+
+    @media (min-width: $bp-lp) {
+      font-size: 1.24rem;
+      width: 23.53rem;
+      font-weight: 300;
+      margin: 1.294rem 0 9.059rem;
+    }
+  }
+  &__illustration{
+    @media (min-width: 1178px) {
+      position: absolute;
+      top: 12.5rem;
+      left: 36rem;
+      pointer-events: none;
+
+    }
+    img{
+      @media (min-width: $bp-lp) {
+        width: 60%;
+        height: 40%;
+      }
+      @media (max-width: 1179px) {
+        width: 60%;
+        height: 40%;
+      }
+    }
+  }
+}

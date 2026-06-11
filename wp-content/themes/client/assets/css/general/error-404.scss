@@ -1,0 +1,18 @@
+@use 'general' as *;
+
+.error-404 {
+  padding: $space-md $space-sm;
+  text-align: center;
+  background-color: $color-purple-light;
+
+  @media (min-width: $bp-lp) {
+    padding: 2.94rem 8.529rem 2.94rem;
+    line-height: 1.9;
+  }
+  &__link{
+    &:hover{
+      color: $color-purple-hover;
+      font-weight: 500;
+    }
+  }
+}

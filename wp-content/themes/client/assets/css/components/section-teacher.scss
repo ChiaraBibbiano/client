@@ -1,0 +1,88 @@
+@use '../general/general' as *;
+
+.section-teacher {
+  padding: $space-lg $space-md;
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+
+  }
+
+  &__title {
+    margin-bottom: $space-sm;
+    font-weight: 300;
+    @media (min-width: $bp-lp) {
+      margin-bottom: 1.765rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    background-color: $color-purple;
+    border-radius: 1.765rem;
+    padding: $space-md $space-md 8rem;;
+    @media (min-width: $bp-lp) {
+      padding: 5.29rem 20rem 5.88rem 6.18rem;
+    }
+  }
+
+  &__btn {
+
+    height: 5.71rem;
+    width: 4rem;
+    padding: 1.88rem 2.35rem 1.47rem 2.65rem;
+    border-radius: 4.41rem;
+    display: flex;
+    background-color: $color-bg;
+    margin-top: 3rem;
+
+    @media (min-width: 1358px) {
+      position: absolute;
+      top: 5rem;
+      left: 59rem;
+      &:hover {
+        transform: scale(1.03) rotate(20deg);
+      }
+    }
+  }
+}
+
+
+.section-teacher-falc {
+  padding: $space-md $space-sm;
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__title {
+    font-weight: 300;
+
+  }
+
+  &__container {
+    background-color: $color-purple;
+    border-radius: 1.765rem;
+    padding: $space-md;
+    @media (min-width: $bp-lp) {
+      padding: 5.29rem 18.53rem 5.88rem 6.18rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: $space-md;
+  }
+
+  &__btn {
+    color: $color-btn;
+    padding: 0.59rem 1.82rem;
+    background-color: $color-bg;
+    border: 3px solid $color-btn;
+    border-radius: 0.47rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-btn;
+      color: $color-bg;
+    }
+  }
+}

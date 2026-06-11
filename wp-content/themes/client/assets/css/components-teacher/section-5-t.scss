@@ -1,0 +1,84 @@
+@use '../general/general' as *;
+
+.section-5 {
+  padding: $space-md $space-md;
+  background-color: $color-purple-light;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__top {
+    margin-bottom: 2.353rem;
+    @media (min-width: $bp-lp) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:focus-visible {
+      color: $color-purple-hover;
+    }
+  }
+  &__arrow{
+
+  }
+}
+.sensi {
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  &__card {
+    flex: 0 1 13.75rem; // 220px
+    max-width: 13.75rem;
+    width: 100%;
+    background-color: $color-bg;
+    border: 1px solid $color-purple;
+    border-radius: 1.88rem 1.88rem 0 4.36rem;
+    padding: 2.13rem 2.13rem 4.5rem;
+    min-height: 20.3rem;
+    &:hover {
+      transform: scale(1.03) rotate(1deg);
+    }
+  }
+
+  &__card-type {
+    background-color: $color-purple-light;
+    padding: 0.59rem;
+    border-radius: 1.18rem;
+    display: inline-flex;
+  }
+
+  &__card-title {
+    font-size: 1.53rem;
+    margin: 1.765rem 0;
+  }
+
+  &__card-intro {
+    margin-bottom: 1.765rem;
+  }
+
+  &__card-link {
+    text-decoration-line: underline;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-purple-hover;
+      font-weight: 600;
+    }
+  }
+  &__card-files{
+    color: $color-btn;
+    margin-bottom: $space-md;
+  }
+
+}

@@ -1,0 +1,110 @@
+@use '../general/general' as *;
+
+.contact {
+  padding: $space-md;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: $bp-lp) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__container {
+    background-color: $color-purple;
+    border-radius: 1.765rem 1.765rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 2rem 2.353rem;
+    @media (max-width: $bp-mb) {
+      padding: 1rem;
+    }
+  }
+
+  &__title1 {
+    font-size: 1.882rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: $bp-mb) {
+     font-size: 1rem;
+    }
+  }
+
+  &__title2 {
+    font-size: 2.118rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: $bp-mb) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__side {
+    display: flex;
+  }
+
+  &__side-text {
+    background-color: $color-purple-light;
+    color: $color-purple;
+    font-size: 1.176rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2.71rem 1.29rem;
+    border-radius: 1.765rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    @media (max-width: $bp-mb) {
+      font-size: 1rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 5.882rem 2.353rem 4.412rem;
+    background-color: $color-purple;
+    border-radius: 0 2rem 2rem 2rem;
+
+    @media (max-width: $bp-lp) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: $color-purple-light;
+    border-radius: 1.176rem;
+    padding: 1.5rem;
+    &:hover {
+      transform: scale(1.03) rotate(1deg);
+    }
+  }
+
+  &__card-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 3.529rem;
+    font-size: 1.176rem;
+  }
+
+  &__card-text {
+    font-size: 0.941rem;
+    line-height: 1.7;
+
+    p {
+      margin-bottom: 0.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '../general/general' as *;
+
+.section-2-teacher {
+  &__subtitle {
+
+    @media (min-width: $bp-lp) {
+      width: 41.94rem;
+      margin-bottom: 2.35rem;
+    }
+  }
+
+  &__subtitleDeux {
+    margin-top: 5rem;
+    @media (min-width: $bp-lp) {
+      margin-top: 5.88rem;
+    }
+  }
+  &__container{
+    @media (max-width: $bp-lp) {
+      align-items: stretch;
+    }
+
+  }
+}

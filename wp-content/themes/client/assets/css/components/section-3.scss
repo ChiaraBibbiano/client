@@ -1,0 +1,64 @@
+@use '../general/general' as *;
+
+.section-3 {
+  background-color: $color-purple-light;
+  padding: $space-lg $space-md;
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__left {
+    @media (min-width: $bp-lp) {
+      grid-row: 1;
+
+    }
+
+  }
+
+  &__right {
+    @media (min-width: $bp-lp) {
+      align-content: center;
+    }
+
+  }
+
+  &__illustration {
+    img {
+      @media (min-width: $bp-lp) {
+        transform: scaleX(-1);
+      }
+
+      @media (max-width: $bp-lp) {
+        width: 50%;
+        height: 50%;
+
+      }
+    }
+
+    pointer-events: none;
+  }
+  &__svg{
+    position: relative;
+  }
+
+  &__regle {
+    position: relative;
+    bottom: 3rem;
+    left: 0rem;
+    animation: float 3s ease-in-out infinite 0.5s;
+    @media (min-width: $bp-lp) {
+      bottom: 50rem;
+      left: 75rem;
+    }
+  }
+}
+
+.section-3-falc {
+  background-color: $color-purple-light;
+  padding: $space-md $space-sm;
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+}

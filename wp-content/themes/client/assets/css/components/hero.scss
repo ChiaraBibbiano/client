@@ -1,0 +1,92 @@
+@use '../general/general' as *;
+
+.hero{
+ padding: 0 1rem 1rem;
+
+  @media (min-width: $bp-lp) {
+    padding: 0 $padd-d 10.59rem;
+  }
+  &__title{
+    position: relative;
+    font-size: 1.875rem;
+    margin: $space-md 0 $space-md;
+    @media (max-width: $bp-lp) {
+      width: 361px;
+    }
+    @media (min-width: $bp-lp) {
+      font-size: 2.76rem;
+      width: 35.88rem;
+      margin: 10.35rem 0 1.29rem;
+
+    }
+  }
+  &__cercle{
+    width: 15rem;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      width: 24.8rem;
+      height: 6.1rem;
+      position: absolute;
+      top: 16rem;
+      left: 6rem;
+      pointer-events: none;
+    }
+  }
+  &__soulUn{
+    position: absolute;
+    top: 12rem;
+    left: 5rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      position: absolute;
+      top: 25rem;
+      left: 23rem;
+      pointer-events: none;
+    }
+
+  }
+  &__soulDeux{
+    position: absolute;
+    top: 12.5rem;
+    left: 4rem;
+    pointer-events: none;
+    @media (min-width: $bp-lp) {
+      position: absolute;
+      top: 25.5rem;
+      left: 21rem;
+      pointer-events: none;
+    }
+  }
+  &__text{
+    font-weight: 300;
+    max-width: 31rem;
+
+    @media (min-width: $bp-lp) {
+      font-size: 1.24rem;
+      width: 29.71rem;
+    }
+  }
+  &__illustration{
+    @media (min-width: $bp-lp) {
+      position: absolute;
+      top: 9.5rem;
+      left: 45rem;
+      pointer-events: none;
+    }
+    img{
+      @media (max-width: $bp-lp) {
+        width: 60%;
+        height: 40%;
+      }
+    }
+  }
+}
+.hero-falc{
+  padding: $space-md 1rem ;
+  @media (min-width: $bp-lp) {
+    padding: $space-lg $padd-d;
+  }
+}

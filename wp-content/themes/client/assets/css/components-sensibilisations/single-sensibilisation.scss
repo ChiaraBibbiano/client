@@ -1,0 +1,40 @@
+@use '../general/general' as *;
+
+.sensi-single {
+  padding: $space-md $space-md;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__type {
+    background-color: $color-purple-light;
+    padding: .59rem;
+    border-radius: 1.18rem;
+    display: inline-flex;
+  }
+
+  &__title {
+    margin: $space-md 0 $space-xs;
+  }
+
+  &__intro {
+    width: 52rem;
+    @media (max-width: $bp-lp) {
+      width: inherit;;
+    }
+  }
+
+  &__about, &__signes, &__amenagement-title, &__ressource-title {
+    background-color: $color-purple;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 1.18rem;
+    display: inline-flex;
+    margin: 5rem 0 $space-xs;
+  }
+
+  &__about-text, &__card-files {
+    padding: 1rem;
+  }
+}

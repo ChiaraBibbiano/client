@@ -1,0 +1,33 @@
+@use 'general' as *;
+
+.legal{
+  padding: $space-md $space-md;
+
+  @media (min-width: $bp-lp) {
+    padding: $padd-d;
+  }
+
+  &__header{
+    @media (max-width: $bp-lp) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  strong{
+    font-weight: 600;
+    font-size: 1.25rem;
+    @media (min-width: $bp-lp) {
+      font-size: 1.18rem;
+    }
+  }
+  em{
+    font-style: italic;
+  }
+  p{
+
+    @media (min-width: $bp-lp) {
+      width: 47rem;
+      margin: 2rem 0 4rem;
+    }
+
+  }
+}

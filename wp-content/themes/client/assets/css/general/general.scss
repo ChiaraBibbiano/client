@@ -1,11 +1,85 @@
+//couleurs de base
+$color-bg: #FAF9FF; //blanc
+$color-typo: #333333; //typo
+$color-purple-light: #F3EBFF80;
+$color-btn: #8834FB;
+$color-purple: #B58CFC;
+$color-purple-hover: #5E1FCF;
+
+
+//couleurs formes
+$color-violet: #CDB4DB;
+$color-pink: #FFAFCC;
+$color-pink: #FFAFCC;
+$color-blue: #A2D2FF;
+$color-green: #DAEDBD;
+
+//typo
+$font: "Figtree", Arial, sans-serif;
+
+
+//espacements
+$space-xs: 0.5rem; //  8px
+$space-sm: 1rem; // 16px
+$space-md: 2rem; // 32px
+$space-lg: 4rem; // 64px
+$space-xl: 6rem; // 96px
+$padd-d: 5.88rem; //100px
+
+//tailles de base
+$fs-mobile: 16px;
+$fs-desktop: 17px;
+
+//breakpoints
+$bp-mb: 768px;
+$bp-lp: 1024px;
+$bp-dt: 1280px;
+
+
+html {
+  font-size: $fs-mobile;
+
+  @media (min-width: $bp-lp) {
+    font-size: $fs-desktop;
+  }
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-typo;
+  font-family: $font;
+  line-height: 1.5;
+
+}
+
 .sro {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.title {
+
+  @media (min-width: $bp-lp) {
+    font-size: 1.41rem;
+    font-weight: 400;
+  }
+}
+
+.sub {
+  font-size: 1.563rem;
+  @media (min-width: $bp-lp) {
+    font-size: 2.35rem;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
